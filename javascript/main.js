@@ -41,7 +41,6 @@ SoundCloudAPI.init = function() {
 SoundCloudAPI.init();
 
 SoundCloudAPI.getTrack = function(inputValue) {
-    
     // find all sounds of requested Tracks
     SC.get('/tracks', {
         q: inputValue
@@ -57,7 +56,6 @@ SoundCloudAPI.renderTracks = function(tracks) {
 
     //Looping through all objects
     tracks.forEach(function(track){
-        
         //card
         var card = document.createElement('div');
         card.classList.add('card');
@@ -89,7 +87,6 @@ SoundCloudAPI.renderTracks = function(tracks) {
 
         var buttonText = document.createElement('span');
         buttonText.innerHTML = 'Add to playlist';
-        
         //appendChild
         content.appendChild(header);
 
@@ -150,7 +147,7 @@ Playlist.clearButtonRender = function() {
         clearButton.classList.add('clear-button');
         clearButton.innerHTML = ("<a href=\"#\">Clear Playlist</a>")
         sideBar.appendChild(clearButton);
-        Playlist.clearPlaylist();        
+        Playlist.clearPlaylist();
     }
     else return;
 }
